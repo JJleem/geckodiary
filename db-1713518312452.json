@@ -1,0 +1,214 @@
+{
+  "crestedgecko": [
+    {
+      "id": 0,
+      "img": "",
+      "name": "백룡",
+      "birth": "23/07/01",
+      "gender": "Male",
+      "morph": "Lilly White",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": "바마프"
+    },
+    {
+      "id": 1,
+      "img": "",
+      "name": "참깨",
+      "birth": "23/05/01",
+      "gender": "Female",
+      "morph": "Normal",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": "렙타일아트뮤지엄"
+    },
+    {
+      "id": 2,
+      "img": "",
+      "name": "튼튼",
+      "birth": "23/09/25",
+      "gender": "Male",
+      "morph": "Axantic",
+      "parent": [
+        "탄",
+        "?"
+      ],
+      "shop": "크레스탈"
+    },
+    {
+      "id": 3,
+      "img": "",
+      "name": "뿌치",
+      "birth": "23/10/05",
+      "gender": "Male",
+      "morph": "Cappuccino",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": "WalnutCre"
+    },
+    {
+      "id": 4,
+      "img": "",
+      "name": "레오",
+      "birth": "23/11/24",
+      "gender": "Female",
+      "morph": "Lilly White(Het)(Phantom)",
+      "parent": [
+        "GOD",
+        "?"
+      ],
+      "shop": "infinite gecko"
+    },
+    {
+      "id": 5,
+      "img": "",
+      "name": "티티",
+      "birth": "23/09/01",
+      "gender": "Male",
+      "morph": "Lilly White(Het)",
+      "parent": [
+        "앨리엇",
+        ""
+      ],
+      "shop": "도심속도마뱀"
+    },
+    {
+      "id": 6,
+      "img": "",
+      "name": "나나",
+      "birth": "23/10/01",
+      "gender": "Female",
+      "morph": "Lilly White(Het)",
+      "parent": [
+        "앨리엇",
+        ""
+      ],
+      "shop": "도심속도마뱀"
+    },
+    {
+      "id": 7,
+      "img": "",
+      "name": "송이",
+      "birth": "23/11/01",
+      "gender": "Male",
+      "morph": "Sable",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": "꼰정게코"
+    },
+    {
+      "id": 8,
+      "img": "",
+      "name": "또치",
+      "birth": "23/12/01",
+      "gender": "Unknown",
+      "morph": "Cappuccino",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": "WalnutCre"
+    },
+    {
+      "id": 9,
+      "img": "",
+      "name": "달찌",
+      "birth": "23/09/01",
+      "gender": "Female",
+      "morph": "Normal(Super Dalmatian)",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": "Atory"
+    },
+    {
+      "id": 10,
+      "img": "",
+      "name": "마찌",
+      "birth": "23/05/01",
+      "gender": "Male",
+      "morph": "Normal(Dalmatian)",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": "Atory"
+    },
+    {
+      "id": 11,
+      "img": "",
+      "name": "춘향",
+      "birth": "23/09/01",
+      "gender": "Female",
+      "morph": "Lilly White",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": "Thewall"
+    },
+    {
+      "id": 12,
+      "img": "",
+      "name": "무뮤",
+      "birth": "24/03/01",
+      "gender": "Unknown",
+      "morph": "Lilly White(Het)",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": "Atory"
+    },
+    {
+      "id": 13,
+      "img": "",
+      "name": "옹치",
+      "birth": "24/03/01",
+      "gender": "Unknown",
+      "morph": "Cappuccino(Pin)",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": "Creyong"
+    },
+    {
+      "id": 14,
+      "img": "",
+      "name": "몽룡",
+      "birth": "23/10/01",
+      "gender": "Male",
+      "morph": "Normal(트익할)",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": "쭌이네"
+    }
+  ],
+  "turtle": [
+    {
+      "1d": 0,
+      "img": "",
+      "name": "빈치",
+      "birth": "06/~/~",
+      "gender": "Female",
+      "morph": "Unknown",
+      "parent": [
+        "",
+        ""
+      ],
+      "shop": ""
+    }
+  ]
+}
