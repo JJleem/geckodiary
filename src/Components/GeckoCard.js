@@ -8,13 +8,23 @@ const GeckoCard = ({ item }) => {
   };
   return (
     <div className="geckocard" onClick={showDetail}>
-      d
-      {/* <img src={item?.img} alt="imginfo" />
-      <div>Concious Choiceddd</div>
-      <div>{item?.name}</div>
-      <div>₩{item?.price}</div>
-      <div>{item?.new === true ? "신상품" : ""}</div> */}
-      d
+      <img src={item?.img} alt="imginfo" />
+
+      <div className="textinfo">
+        {" "}
+        <span>Name:</span> {item?.name}
+      </div>
+      <div className="textinfo">
+        <span>Morph: </span> {item?.morph}
+      </div>
+      <div className="textinfo">
+        {" "}
+        <span>Gender:</span> {item?.gender}
+      </div>
+      <div className="textinfo">
+        {" "}
+        <span>Birth : </span> {item?.birth}
+      </div>
     </div>
   );
 };

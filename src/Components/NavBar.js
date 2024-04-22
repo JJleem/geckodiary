@@ -8,7 +8,14 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import CloseButton from "react-bootstrap/CloseButton";
-const menuList = ["Lilly White", "Normal", "Axantic", "Cappuccino", "Sable"];
+const menuList = [
+  "Lilly White",
+  "Normal",
+  "Axantic",
+  "Cappuccino",
+  "Sable",
+  "Turtle",
+];
 
 const NavBar = () => {
   const divRef = useRef();
@@ -25,9 +32,6 @@ const NavBar = () => {
     <div className="nav-header">
       <div className="response" ref={divRef}>
         <ul className="modalMenu">
-          {/* <div className="modal-close">
-            <FontAwesomeIcon icon={faClose} onClick={close} />
-          </div> */}
           <CloseButton className="modal-close" onClick={closeClick} />
           {menuList.map((menu, idx) => (
             <li key={idx}>
@@ -45,6 +49,7 @@ const NavBar = () => {
             src="https://thumb.ac-illust.com/c3/c37805a9035418af41b90223aef92c7f_t.jpeg"
             alt="logo"
           />
+          <h1 className="titleh1">Breeding Diary</h1>
         </Link>
       </div>
       <div className="nav-menu-area">
@@ -55,6 +60,10 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
+        <div className="search-box">
+          <FontAwesomeIcon icon={faSearch} className="searchIcon" />
+          <input type="text" placeholder="검색" />
+        </div>
       </div>
     </div>
   );
