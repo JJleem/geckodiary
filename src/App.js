@@ -3,24 +3,128 @@ import NavBar from "./Components/NavBar";
 import All from "./Components/All";
 import Toggle from "./Components/Toggle";
 import GeckoDetail from "./Components/GeckoDetail";
-import { Routes, Route } from "react-router-dom";
+import Edit from "./Components/Edit";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Components/Footer";
-import { Container, Col, Row } from "react-bootstrap";
+import New from "./Components/New";
+import React, { useReducer, useRef, useEffect, useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "INIT": {
+      return action.data;
+    }
+    case "CREATE": {
+      const newState = [action.data, ...state];
+      localStorage.setItem("diary", JSON.stringify(newState));
+      return newState;
+    }
+    case "UPDATE": {
+      const newState = state.map((it) =>
+        String(it.id) === String(action.data.id) ? { ...action.data } : it
+      );
+      localStorage.setItem("diary", JSON.stringify(newState));
+      return newState;
+    }
+    case "DELETE": {
+      const newState = state.filter(
+        (it) => String(it.id) !== String(action.targetId)
+      );
+      localStorage.setItem("diary", JSON.stringify(newState));
+      return newState;
+    }
+    default: {
+      return state;
+    }
+  }
+};
+
+export const DiaryStateContext = React.createContext();
+export const DiaryDispatchContext = React.createContext();
 
 function App() {
-  return (
-    <div className="App">
-      <NavBar />
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
+  const [data, dispatch] = useReducer(reducer, []);
+  const idRef = useRef(0);
+  const { id } = useParams();
+  useEffect(() => {
+    const rawData = localStorage.getItem("diary");
+    if (!rawData) {
+      setIsDataLoaded(true);
+      return;
+    }
+    const localData = JSON.parse(rawData);
+    if (localData.length === 0) {
+      setIsDataLoaded(true);
+      return;
+    }
+    localData.sort((a, b) => Number(b.id) - Number(a.id));
+    idRef.current = localData[0].num + 1;
+    console.log(idRef.current);
+    console.log(localData);
+    dispatch({
+      type: "INIT",
+      data: localData,
+    });
+    setIsDataLoaded(true);
+  }, []);
 
-      <Routes>
-        <Route path="/" element={<All />} />
-        <Route path="/gecko/:id" element={<GeckoDetail />} />
-      </Routes>
-      <Toggle />
-      <Footer />
-    </div>
-  );
+  const onCreate = (id, paramsid, date, emotionId, content) => {
+    dispatch({
+      type: "CREATE",
+      data: {
+        num: idRef.current,
+        paramsid,
+        date: new Date(date).getTime(),
+        emotionId,
+        content,
+      },
+    });
+    idRef.current += 1;
+  };
+  const onUpdate = (paramsid, targetId, date, emotionId, content) => {
+    dispatch({
+      type: "UPDATE",
+      data: {
+        paramsid,
+        num: targetId,
+        date: new Date(date).getTime(),
+        content,
+        emotionId,
+      },
+    });
+  };
+
+  const onDelete = (targetId) => {
+    dispatch({
+      type: "DELETE",
+      targetId,
+    });
+  };
+  if (!isDataLoaded) {
+    return <div>데이터를 불러오는 중입니다.</div>;
+  } else {
+    return (
+      <DiaryStateContext.Provider value={data}>
+        <DiaryDispatchContext.Provider value={{ onCreate, onUpdate, onDelete }}>
+          <div className="App">
+            <NavBar />
+
+            <Routes>
+              <Route path="/" element={<All />} />
+              <Route path="/gecko/:id" element={<GeckoDetail />} />
+              <Route path="/gecko/:id/new" element={<New />} />
+              <Route path="/gecko/:id/edit/:num" element={<Edit />} />
+            </Routes>
+            <Toggle />
+            <Footer />
+          </div>
+        </DiaryDispatchContext.Provider>
+      </DiaryStateContext.Provider>
+    );
+  }
 }
 
 export default App;

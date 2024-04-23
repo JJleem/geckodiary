@@ -187,7 +187,6 @@ a {
   align-items: center;
 }
 .slide {
-  border: 1px solid #f00;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,11 +198,7 @@ a {
   max-width: 840px;
   max-height: 840px;
 }
-/* .gecko-detail-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+
 .gecko-detail-img img {
   width: 100%;
   height: 100%;
@@ -217,9 +212,9 @@ a {
   padding-left: 50px;
   padding-right: 50px;
 }
-.textinfo {
+.gecko-text .textinfo {
   border-bottom: 2px solid #999;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -229,9 +224,11 @@ a {
   font-weight: bold;
 }
 .gecko-weight {
-  border: 1px solid #f00;
 }
-
+/* gecko weight */
+.gecko-weight {
+  display: flex;
+}
 /* toggle */
 .toggle {
   position: fixed;

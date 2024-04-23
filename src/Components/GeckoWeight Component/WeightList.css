@@ -1,0 +1,21 @@
+.menu_wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 30px;
+}
+.left_col select {
+  border: none;
+  background: #ececec;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Nanum Pen Script";
+}
+.right_col {
+  flex-grow: 1;
+}
+.right_col button {
+  width: 100%;
+}

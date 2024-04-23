@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Col, Row, Spinner, Carousel } from "react-bootstrap";
+import GeckoWeight from "./GeckoWeight";
 
 const GeckoDetail = () => {
   const [gecko, setGecko] = useState();
@@ -18,7 +19,7 @@ const GeckoDetail = () => {
   useEffect(() => {
     getGeckoDetail();
   }, []);
-  console.log(gecko?.parent.map((it) => (it === "" ? "d" : it)));
+
   if (loading || gecko === null) {
     return <Spinner className="Spinner" animation="border" variant="success" />;
   } else {
@@ -86,7 +87,7 @@ const GeckoDetail = () => {
           </Col>
         </Row>
         <Row className="gecko-weight">
-          <div className="weightInfo"></div>
+          <GeckoWeight />
         </Row>
       </Container>
     );
