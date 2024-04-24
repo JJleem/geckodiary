@@ -7,16 +7,16 @@ import { useParams } from "react-router-dom";
 const WeightItem = ({ num, paramsid, date, emotionId, content }) => {
   const navigate = useNavigate();
   const goDetail = () => {
-    navigate(`/diary/`);
+    navigate(`/gecko/${id}/edit/${num}/diary`);
   };
   const goEdit = () => {
     navigate(`/gecko/${id}/edit/${num}`);
   };
-  console.log(date);
+
   const dataString = localStorage.getItem("diary");
   const data = JSON.parse(dataString);
   const { id } = useParams();
-  console.log(data);
+
   if (paramsid === id) {
     return (
       <div className="WeightItem">

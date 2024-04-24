@@ -13,6 +13,8 @@ const Editor = ({ initData, onSubmit }) => {
     date: getFormattedDate(new Date()),
     emotionId: 3,
     content: "",
+    num: "",
+    paramsid: "",
   });
 
   const handlecChangeDate = (e) => {
@@ -20,6 +22,7 @@ const Editor = ({ initData, onSubmit }) => {
       ...state,
       date: e.target.value,
     });
+    console.log(e.target);
   };
 
   useEffect(() => {

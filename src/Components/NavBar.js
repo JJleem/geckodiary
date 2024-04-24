@@ -16,8 +16,20 @@ const menuList = [
   "Sable",
   "Turtle",
 ];
-
+const genderList = ["Male", "Female", "Unknown"];
 const NavBar = () => {
+  const navigate = useNavigate();
+  const onCheckEnter = (e) => {
+    if (e.key === "Enter") {
+      navigate(`?q=${e.target.value}`);
+      e.target.value = "";
+    }
+  };
+  const onClickEnter = (e) => {
+    navigate(`?q=${e.target.innerText}`);
+    divRef.current.style.display = "none";
+    toggleRef.current.style.display = "block";
+  };
   const divRef = useRef();
   const toggleRef = useRef();
   const closeClick = () => {
@@ -34,8 +46,8 @@ const NavBar = () => {
         <ul className="modalMenu">
           <CloseButton className="modal-close" onClick={closeClick} />
           {menuList.map((menu, idx) => (
-            <li key={idx}>
-              <Link to="#">{menu}</Link>
+            <li key={idx} onClick={onClickEnter}>
+              <Link>{menu}</Link>
             </li>
           ))}
         </ul>
@@ -55,14 +67,21 @@ const NavBar = () => {
       <div className="nav-menu-area">
         <ul className="menu">
           {menuList.map((menu, idx) => (
-            <li key={idx}>
+            <li onClick={onClickEnter} key={idx}>
+              <Link to="#">{menu}</Link>
+            </li>
+          ))}
+        </ul>
+        <ul className="gender">
+          {genderList.map((menu, idx) => (
+            <li onClick={onClickEnter} key={idx}>
               <Link to="#">{menu}</Link>
             </li>
           ))}
         </ul>
         <div className="search-box">
           <FontAwesomeIcon icon={faSearch} className="searchIcon" />
-          <input type="text" placeholder="검색" />
+          <input onKeyUp={onCheckEnter} type="text" placeholder="검색" />
         </div>
       </div>
     </div>

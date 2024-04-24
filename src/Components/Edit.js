@@ -9,11 +9,30 @@ import { DiaryStateContext } from "../App";
 
 const Edit = () => {
   const { id } = useParams();
-  const numData = useContext(DiaryStateContext);
-  console.log(numData.map((it) => it.num));
-  const data = useDiary();
+  const { num } = useParams();
+
+  const data = useDiary(num);
   useEffect(() => {
-    setPageTitle(`${id}번째 일기 Edit`);
+    setPageTitle(`
+    ${
+      (id >= 0 && id <= 0 && "백룡") ||
+      (id >= 1 && id <= 1 && "참깨") ||
+      (id >= 2 && id <= 2 && "튼튼") ||
+      (id >= 3 && id <= 3 && "뿌치") ||
+      (id >= 4 && id <= 4 && "레오") ||
+      (id >= 5 && id <= 5 && "티티") ||
+      (id >= 6 && id <= 6 && "나나") ||
+      (id >= 7 && id <= 7 && "송이") ||
+      (id >= 8 && id <= 8 && "또치") ||
+      (id >= 9 && id <= 9 && "달찌") ||
+      (id >= 10 && id <= 10 && "마찌") ||
+      (id >= 11 && id <= 11 && "춘향") ||
+      (id >= 12 && id <= 12 && "무뮤") ||
+      (id >= 13 && id <= 13 && "옹치") ||
+      (id >= 14 && id <= 14 && "몽룡") ||
+      (id >= 15 && id <= 15 && "빈치")
+    } 
+    의 일기 수정하기`);
   }, []);
   const navigate = useNavigate();
   const goBack = () => {
@@ -22,14 +41,14 @@ const Edit = () => {
   const { onUpdate, onDelete } = useContext(DiaryDispatchContext);
   const onClickDelete = () => {
     if (window.confirm("기록을 정말 삭제할까요? 다시 복구되지 않습니다.")) {
-      onDelete(id);
-      navigate(-1);
+      onDelete(num);
+      navigate(`/gecko/${id}`);
     }
   };
   const onSubmit = (data) => {
     if (window.confirm("일기를 정말 수정할까요?")) {
-      const { date, emotionId, content } = data;
-      onUpdate(date, emotionId, content);
+      const { num, paramsid, date, emotionId, content } = data;
+      onUpdate(num, paramsid, date, emotionId, content);
       navigate(-1);
     }
   };

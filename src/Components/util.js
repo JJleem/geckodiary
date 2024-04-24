@@ -94,21 +94,21 @@ export const setPageTitle = (title) => {
 };
 setPageTitle();
 
-export const useDiary = () => {
-  const { num } = useParams();
+export const useDiary = (id) => {
   const data = useContext(DiaryStateContext);
+
   const [diary, setDiary] = useState();
   const navigate = useNavigate();
-  console.log(data.num);
-  console.log(num);
+
   useEffect(() => {
-    const matchDiary = data.find((it) => num === it.num);
+    const matchDiary = data.find((it) => String(it.num) === String(id));
+
     if (matchDiary) {
       setDiary(matchDiary);
     } else {
-      // alert("존재하지 않는 일기입니다.");
-      // navigate(-1);
+      alert("존재하지 않는 일기입니다.");
+      navigate(-1);
     }
-  }, [num, data]);
+  }, [id, data]);
   return diary;
 };

@@ -8,10 +8,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Components/Footer";
 import New from "./Components/New";
 import React, { useReducer, useRef, useEffect, useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import Diary from "./Components/Diary";
 
 const reducer = (state, action) => {
+  console.log(state);
+  console.log(action);
   switch (action.type) {
     case "INIT": {
       return action.data;
@@ -23,15 +26,17 @@ const reducer = (state, action) => {
     }
     case "UPDATE": {
       const newState = state.map((it) =>
-        String(it.id) === String(action.data.id) ? { ...action.data } : it
+        String(it.num) === String(action.data.num) ? { ...action.data } : it
       );
       localStorage.setItem("diary", JSON.stringify(newState));
       return newState;
     }
     case "DELETE": {
       const newState = state.filter(
-        (it) => String(it.id) !== String(action.targetId)
+        (it) => String(it.num) !== String(action.targetId)
       );
+      console.log(state.filter((it) => String(it.num)));
+      console.log(state.filter((it) => String(action.num)));
       localStorage.setItem("diary", JSON.stringify(newState));
       return newState;
     }
@@ -62,8 +67,7 @@ function App() {
     }
     localData.sort((a, b) => Number(b.id) - Number(a.id));
     idRef.current = localData[0].num + 1;
-    console.log(idRef.current);
-    console.log(localData);
+
     dispatch({
       type: "INIT",
       data: localData,
@@ -84,12 +88,12 @@ function App() {
     });
     idRef.current += 1;
   };
-  const onUpdate = (paramsid, targetId, date, emotionId, content) => {
+  const onUpdate = (num, paramsid, date, emotionId, content) => {
     dispatch({
       type: "UPDATE",
       data: {
+        num,
         paramsid,
-        num: targetId,
         date: new Date(date).getTime(),
         content,
         emotionId,
@@ -117,6 +121,7 @@ function App() {
               <Route path="/gecko/:id" element={<GeckoDetail />} />
               <Route path="/gecko/:id/new" element={<New />} />
               <Route path="/gecko/:id/edit/:num" element={<Edit />} />
+              <Route path="/gecko/:id/edit/:num/diary" element={<Diary />} />
             </Routes>
             <Toggle />
             <Footer />

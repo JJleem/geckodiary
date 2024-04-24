@@ -135,22 +135,38 @@ a {
 .search-box input:focus {
   outline: none;
 }
-.menu {
+.menu,
+.gender {
   display: flex;
   gap: 15px;
   justify-content: center;
 }
-.menu li a {
+.menu li a,
+.gender li a {
   text-decoration: none;
   color: inherit;
   font-weight: bold;
 }
-.menu li {
+.menu li,
+.gender li {
   padding: 5px 10px;
   box-shadow: 0px 0px 4px green;
   border-radius: 10px;
   font-weight: bold;
   transition: all 0.3s;
+}
+.gender li {
+  color: #fff;
+  box-shadow: 0px 0px 4px #999;
+}
+.gender li:first-child {
+  background: blue;
+}
+.gender li:nth-child(2) {
+  background: violet;
+}
+.gender li:last-child {
+  background: black;
 }
 .menu li:hover {
   background: rgba(0, 150, 0, 0.7);
@@ -223,8 +239,7 @@ a {
 .textinfo span {
   font-weight: bold;
 }
-.gecko-weight {
-}
+
 /* gecko weight */
 .gecko-weight {
   display: flex;
