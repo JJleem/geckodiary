@@ -4,6 +4,7 @@ import WeightList from "./GeckoWeight Component/WeightList";
 import React, { useState, useContext, useEffect } from "react";
 import { DiaryStateContext } from "../App";
 import { getMonthRangeByDate } from "./util";
+import styled from "styled-components";
 
 const GeckoWeight = () => {
   const data = useContext(DiaryStateContext);
@@ -32,15 +33,19 @@ const GeckoWeight = () => {
     pivotDate.getMonth() + 1
   }월`;
   return (
-    <div>
+    <WeightWrap>
       <WeightHeader
         title={headerTitle}
         leftChild={<Button text="<" onClick={onDecreaseMonth} />}
         rightChild={<Button text=">" onClick={onIncreaseMonth} />}
       />
       <WeightList data={filteredData} />
-    </div>
+    </WeightWrap>
   );
 };
 
 export default GeckoWeight;
+
+const WeightWrap = styled.div`
+
+`;

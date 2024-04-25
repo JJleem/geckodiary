@@ -3,6 +3,15 @@ import { Container, Row, Col } from "react-bootstrap";
 import GeckoCard from "./GeckoCard";
 import { setPageTitle } from "./util";
 import { useSearchParams } from "react-router-dom";
+import { styled } from "styled-components";
+
+const Aww = styled.div`
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const All = () => {
   const [query, setQuery] = useSearchParams();
   const searchQuery = query.get("q") || "";

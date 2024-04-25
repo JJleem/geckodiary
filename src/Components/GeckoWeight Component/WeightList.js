@@ -5,6 +5,7 @@ import WeightItem from "./WeightItem";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import styled from "styled-components";
 const sortOptionList = [
   { value: "latest", name: "최신순" },
   { value: "oldest", name: "오래된순" },
@@ -36,8 +37,8 @@ const WeightList = ({ data }) => {
   }, [data, sortType]);
 
   return (
-    <div className="WeightList">
-      <div className="menu_wrapper">
+    <WeightLists>
+      <MenuWrapper>
         <div className="left_col">
           <select value={sortType} onChange={onChangeSortType}>
             {sortOptionList.map((it, idx) => (
@@ -50,14 +51,44 @@ const WeightList = ({ data }) => {
         <div className="right_col">
           <Button text="NEW" type="positive" onClick={onClickNew} />
         </div>
-      </div>
+      </MenuWrapper>
       <div className="list_wrapper">
         {sortedData.map((it, idx) => (
           <WeightItem key={idx} {...it} />
         ))}
       </div>
-    </div>
+    </WeightLists>
   );
 };
 
 export default WeightList;
+const WeightLists = styled.div`
+  width: 90%;
+  margin: 0 auto;
+`;
+const MenuWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 30px;
+`;
+// const ModalMenu = styled.div``;
+// const ModalMenu = styled.div``;
+
+const Geckocard = styled.div`
+  @media ${(props) => props.theme.mobile} {
+    margin-bottom: 40px;
+    margin-top: 80px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px #999;
+    border-radius: 20px;
+  }
+  @media ${(props) => props.theme.desktop} {
+    margin-bottom: 40px;
+    margin-top: 60px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px #999;
+    border-radius: 20px;
+  }
+`;

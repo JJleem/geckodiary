@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { Container, Col, Row, Spinner, Carousel } from "react-bootstrap";
 import GeckoWeight from "./GeckoWeight";
 import { setPageTitle } from "./util";
+import styled from "styled-components";
+
 const GeckoDetail = () => {
   const [gecko, setGecko] = useState();
   const [loading, setLoading] = useState(false);
@@ -46,30 +48,30 @@ const GeckoDetail = () => {
     return <Spinner className="Spinner" animation="border" variant="success" />;
   } else {
     return (
-      <Container>
-        <Row className="gecko-info">
-          <Col className="gecko-detail-img" lg={8}>
-            <Carousel className="slide" fade variant="dark">
-              <Carousel.Item className="slideImgWrap">
-                <img src={gecko?.img} />
+      <GeckoContainer>
+        <GeckoInfo>
+          <Col lg={8}>
+            <Slide interval={1500} fade variant="dark">
+              <SlideImgWrap>
+                <GeckoDetailImg src={gecko?.img} />
                 <Carousel.Caption>
                   <h3>First slide label</h3>
                   <p>
                     Nulla vitae elit libero, a pharetra augue mollis interdum.
                   </p>
                 </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item className="slideImgWrap">
-                <img src={gecko?.img} />
+              </SlideImgWrap>
+              <SlideImgWrap>
+                <GeckoDetailImg src={gecko?.img} />
                 <Carousel.Caption>
                   <h3>Second slide label</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item className="slideImgWrap">
-                <img src={gecko?.img} />
+              </SlideImgWrap>
+              <SlideImgWrap>
+                <GeckoDetailImg src={gecko?.img} />
                 <Carousel.Caption>
                   <h3>Third slide label</h3>
                   <p>
@@ -77,43 +79,102 @@ const GeckoDetail = () => {
                     consectetur.
                   </p>
                 </Carousel.Caption>
-              </Carousel.Item>
-            </Carousel>
+              </SlideImgWrap>
+            </Slide>
           </Col>
           <Col lg={4}>
-            <div className="gecko-text">
-              <div className="textinfo">
+            <GeckoText>
+              <TextInfo>
                 {" "}
-                <span>Name:</span> {gecko?.name}
-              </div>
-              <div className="textinfo">
-                <span>Morph: </span> {gecko?.morph}
-              </div>
-              <div className="textinfo">
+                <Span>Name:</Span> {gecko?.name}
+              </TextInfo>
+              <TextInfo>
+                <Span>Morph: </Span> {gecko?.morph}
+              </TextInfo>
+              <TextInfo>
                 {" "}
-                <span>Gender:</span> {gecko?.gender}
-              </div>
-              <div className="textinfo">
+                <Span>Gender:</Span> {gecko?.gender}
+              </TextInfo>
+              <TextInfo>
                 {" "}
-                <span>Birth : </span> {gecko?.birth}
-              </div>
-              <div className="textinfo">
+                <Span>Birth : </Span> {gecko?.birth}
+              </TextInfo>
+              <TextInfo>
                 {" "}
-                <span>Parent : </span> {gecko?.parent.join(" , ")}
-              </div>
-              <div className="textinfo">
+                <Span>Parent : </Span> {gecko?.parent.join(" , ")}
+              </TextInfo>
+              <TextInfo>
                 {" "}
-                <span>Shop : </span> {gecko?.shop}
-              </div>
-            </div>
+                <Span>Shop : </Span> {gecko?.shop}
+              </TextInfo>
+            </GeckoText>
           </Col>
-        </Row>
-        <Row className="gecko-weight">
+        </GeckoInfo>
+        <GeckoInfo>
           <GeckoWeight />
-        </Row>
-      </Container>
+        </GeckoInfo>
+      </GeckoContainer>
     );
   }
 };
 
 export default GeckoDetail;
+
+const GeckoContainer = styled(Container)``;
+const GeckoInfo = styled(Row)`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #999;
+  margin: 0px auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px #000;
+  padding: 30px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+`;
+const Slide = styled(Carousel)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 80px;
+  z-index: 0;
+`;
+const SlideImgWrap = styled(Carousel.Item)`
+  width: 100%;
+  height: 100%;
+  max-width: 840px;
+  max-height: 840px;
+  z-index: -1;
+`;
+const GeckoDetailImg = styled.img`
+  width: 100%;
+  height: 100%;
+  max-width: 840px;
+  max-height: 840px;
+`;
+const GeckoText = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+`;
+const TextInfo = styled.div`
+  border-bottom: 2px solid #999;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+`;
+const Span = styled.span`
+  font-weight: bold;
+`;
+// const ModalMenu = styled.div``;
+// const ModalMenu = styled.div``;
+// const ModalMenu = styled.div``;
+// const ModalMenu = styled.div``;
+// const ModalMenu = styled.div``;
