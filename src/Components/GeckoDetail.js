@@ -10,7 +10,7 @@ const GeckoDetail = () => {
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
   const getGeckoDetail = async () => {
-    const url = `http://localhost:3004/crestedgecko/${id}`;
+    const url = `https://my-json-server.typicode.com/JJleem/geckodiary/crestedgecko/${id}`;
     setLoading(true);
     const response = await fetch(url);
     const data = await response.json();
@@ -45,7 +45,11 @@ const GeckoDetail = () => {
   }, []);
 
   if (loading || gecko === null) {
-    return <Spinner className="Spinner" animation="border" variant="success" />;
+    return (
+      <SpinnerStyl>
+        <Spinner className="Spinner" animation="border" variant="success" />
+      </SpinnerStyl>
+    );
   } else {
     return (
       <GeckoContainer>
@@ -173,7 +177,13 @@ const TextInfo = styled.div`
 const Span = styled.span`
   font-weight: bold;
 `;
-// const ModalMenu = styled.div``;
+
+const SpinnerStyl = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
 // const ModalMenu = styled.div``;
 // const ModalMenu = styled.div``;
 // const ModalMenu = styled.div``;

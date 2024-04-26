@@ -17,17 +17,21 @@ const All = () => {
   const searchQuery = query.get("q") || "";
   const [geckoList, setGeckoList] = useState([]);
   const getGecko = async () => {
-    const url = `http://localhost:3004/crestedgecko/?q=${searchQuery}`;
+    const url = `https://my-json-server.typicode.com/JJleem/geckodiary/crestedgecko?q=${searchQuery}`;
     const response = await fetch(url);
     const data = await response.json();
     setGeckoList(data);
   };
+
   useEffect(() => {
     setPageTitle(`Breeding Diary`);
   }, []);
+
   useEffect(() => {
     getGecko();
   }, [query]);
+
+  console.log(geckoList);
 
   return (
     <Container>

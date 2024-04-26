@@ -11,7 +11,7 @@ import React, { useReducer, useRef, useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Diary from "./Components/Diary";
-
+import styled from "styled-components";
 const reducer = (state, action) => {
   console.log(state);
   console.log(action);
@@ -113,7 +113,7 @@ function App() {
     return (
       <DiaryStateContext.Provider value={data}>
         <DiaryDispatchContext.Provider value={{ onCreate, onUpdate, onDelete }}>
-          <div className="App">
+          <AppStyle>
             <NavBar />
 
             <Routes>
@@ -125,7 +125,7 @@ function App() {
             </Routes>
             <Toggle />
             <Footer />
-          </div>
+          </AppStyle>
         </DiaryDispatchContext.Provider>
       </DiaryStateContext.Provider>
     );
@@ -133,3 +133,7 @@ function App() {
 }
 
 export default App;
+
+const AppStyle = styled.div`
+  overflow-x: hidden;
+`;
