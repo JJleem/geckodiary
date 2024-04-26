@@ -4,6 +4,7 @@ import { Container, Col, Row, Spinner, Carousel } from "react-bootstrap";
 import GeckoWeight from "./GeckoWeight";
 import { setPageTitle } from "./util";
 import styled from "styled-components";
+import Gallery from "./Gallery";
 
 const GeckoDetail = () => {
   const [gecko, setGecko] = useState();
@@ -55,7 +56,7 @@ const GeckoDetail = () => {
       <GeckoContainer>
         <GeckoInfo>
           <Col lg={8}>
-            <Slide interval={1500} fade variant="dark">
+            <Slide interval={1500} fade variant="info">
               <SlideImgWrap>
                 <GeckoDetailImg src={gecko?.img} />
               </SlideImgWrap>
@@ -96,7 +97,12 @@ const GeckoDetail = () => {
           </Col>
         </GeckoInfo>
         <GeckoInfo>
-          <GeckoWeight />
+          <Col lg={8}>
+            <GeckoWeight />
+          </Col>
+          <Col lg={4}>
+            <Gallery />
+          </Col>
         </GeckoInfo>
       </GeckoContainer>
     );
@@ -105,45 +111,69 @@ const GeckoDetail = () => {
 
 export default GeckoDetail;
 
-const GeckoContainer = styled(Container)``;
+const GeckoContainer = styled(Container)`
+  width: 100%;
+`;
 const GeckoInfo = styled(Row)`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px solid #999;
   margin: 0px auto;
-  border-radius: 20px;
-  box-shadow: 0px 0px 4px #000;
-  padding: 30px;
   margin-top: 80px;
-  margin-bottom: 80px;
+
+  width: 100%;
 `;
 const Slide = styled(Carousel)`
-  text-align: center;
-  margin-bottom: 80px;
-  z-index: 0;
-  border: 1px solid #f00;
+  @media ${(props) => props.theme.mobile} {
+    margin-bottom: 80px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 340px;
+    max-height: 340px;
+    min-height: 340px;
+    min-width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+  @media ${(props) => props.theme.desktop} {
+    text-align: center;
+    margin-bottom: 80px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 840px;
+    max-height: 840px;
+    min-height: auto;
+    min-width: auto;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 const SlideImgWrap = styled(Carousel.Item)`
   @media ${(props) => props.theme.mobile} {
     width: 100%;
     height: 100%;
-    /* max-width: 340px;
+    max-width: 340px;
     max-height: 340px;
-    min-height: auto;
-    min-width: auto; */
+    min-height: 340px;
+    min-width: auto;
     z-index: -1;
   }
   @media ${(props) => props.theme.desktop} {
     width: 100%;
     height: 100%;
-    /* max-width: 840px;
+    max-width: 840px;
     max-height: 840px;
     min-height: auto;
-    min-width: auto; */
+    min-width: auto;
     z-index: -1;
-    border: 1px solid #f00;
   }
 `;
 const GeckoDetailImg = styled.img`
@@ -153,12 +183,9 @@ const GeckoDetailImg = styled.img`
     max-width: 340px;
     max-height: 340px;
     min-height: 340px;
-    min-width: 340px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 0 auto;
+    min-width: auto;
+    border-radius: 100%;
+    object-fit: cover;
   }
   @media ${(props) => props.theme.desktop} {
     width: 100%;
@@ -167,25 +194,31 @@ const GeckoDetailImg = styled.img`
     max-height: 840px;
     min-height: 840px;
     min-width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    object-fit: cover;
   }
 `;
 const GeckoText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding-left: 50px;
-  padding-right: 50px;
 `;
 const TextInfo = styled.div`
-  border-bottom: 2px solid #999;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 8px;
+  @media ${(props) => props.theme.mobile} {
+    border-bottom: 2px solid #999;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+  }
+  @media ${(props) => props.theme.desktop} {
+    border-bottom: 2px solid #999;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+  }
 `;
 const Span = styled.span`
   font-weight: bold;
@@ -197,7 +230,3 @@ const SpinnerStyl = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 `;
-// const ModalMenu = styled.div``;
-// const ModalMenu = styled.div``;
-// const ModalMenu = styled.div``;
-// const ModalMenu = styled.div``;

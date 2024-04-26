@@ -183,7 +183,6 @@ const ModalCloseBtn = styled(CloseButton)`
 `;
 const ToggleMenu = styled.div`
   @media ${(props) => props.theme.mobile} {
-    display: flex !important;
     position: fixed;
     top: 20px;
     right: 10px;
@@ -193,9 +192,6 @@ const ToggleMenu = styled.div`
   }
   @media ${(props) => props.theme.desktop} {
     display: none;
-    justify-content: end;
-    font-size: 30px;
-    z-index: 10;
   }
 `;
 const NavLogo = styled.div`
