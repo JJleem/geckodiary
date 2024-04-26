@@ -17,7 +17,7 @@ const All = () => {
   const searchQuery = query.get("q") || "";
   const [geckoList, setGeckoList] = useState([]);
   const getGecko = async () => {
-    const url = `http://localhost:3004/crestedgecko?q=${searchQuery}`;
+    const url = `http://localhost:3004/crestedgecko/?q=${searchQuery}`;
     const response = await fetch(url);
     const data = await response.json();
     setGeckoList(data);
