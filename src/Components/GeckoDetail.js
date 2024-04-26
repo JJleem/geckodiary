@@ -58,31 +58,12 @@ const GeckoDetail = () => {
             <Slide interval={1500} fade variant="dark">
               <SlideImgWrap>
                 <GeckoDetailImg src={gecko?.img} />
-                <Carousel.Caption>
-                  <h3>First slide label</h3>
-                  <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p>
-                </Carousel.Caption>
               </SlideImgWrap>
               <SlideImgWrap>
                 <GeckoDetailImg src={gecko?.img2} />
-                <Carousel.Caption>
-                  <h3>Second slide label</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </Carousel.Caption>
               </SlideImgWrap>
               <SlideImgWrap>
                 <GeckoDetailImg src={gecko?.img3} />
-                <Carousel.Caption>
-                  <h3>Third slide label</h3>
-                  <p>
-                    Praesent commodo cursus magna, vel scelerisque nisl
-                    consectetur.
-                  </p>
-                </Carousel.Caption>
               </SlideImgWrap>
             </Slide>
           </Col>
@@ -139,25 +120,57 @@ const GeckoInfo = styled(Row)`
   margin-bottom: 80px;
 `;
 const Slide = styled(Carousel)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   margin-bottom: 80px;
   z-index: 0;
+  border: 1px solid #f00;
 `;
 const SlideImgWrap = styled(Carousel.Item)`
-  width: 100%;
-  height: 100%;
-  max-width: 840px;
-  max-height: 840px;
-  z-index: -1;
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+    height: 100%;
+    /* max-width: 340px;
+    max-height: 340px;
+    min-height: auto;
+    min-width: auto; */
+    z-index: -1;
+  }
+  @media ${(props) => props.theme.desktop} {
+    width: 100%;
+    height: 100%;
+    /* max-width: 840px;
+    max-height: 840px;
+    min-height: auto;
+    min-width: auto; */
+    z-index: -1;
+    border: 1px solid #f00;
+  }
 `;
 const GeckoDetailImg = styled.img`
-  width: 100%;
-  height: 100%;
-  max-width: 840px;
-  max-height: 840px;
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+    height: 100%;
+    max-width: 340px;
+    max-height: 340px;
+    min-height: 340px;
+    min-width: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+  }
+  @media ${(props) => props.theme.desktop} {
+    width: 100%;
+    height: 100%;
+    max-width: 840px;
+    max-height: 840px;
+    min-height: 840px;
+    min-width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const GeckoText = styled.div`
   display: flex;

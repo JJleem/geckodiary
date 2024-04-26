@@ -13,7 +13,7 @@ const menuList = [
   "Sable",
   "Turtle",
 ];
-const genderList = ["Male", "Female", "Unknown"];
+const genderList = ["수컷", "암컷", "미구분"];
 const NavBar = () => {
   const navigate = useNavigate();
   const onCheckEnter = (e) => {

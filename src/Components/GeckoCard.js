@@ -40,6 +40,10 @@ const Geckocard = styled.div`
     cursor: pointer;
     box-shadow: 0px 0px 6px #999;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
   }
   @media ${(props) => props.theme.desktop} {
     margin-bottom: 40px;
@@ -48,10 +52,20 @@ const Geckocard = styled.div`
     cursor: pointer;
     box-shadow: 0px 0px 6px #999;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
   }
 `;
 const GeckoCardImg = styled.img`
   width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: 450px;
+  min-height: 450px;
+  min-width: auto;
+  border-radius: 20px;
 `;
 const TextInfo = styled.div`
   display: flex;

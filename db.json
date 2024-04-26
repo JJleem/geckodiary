@@ -3,10 +3,11 @@
     {
       "id": 0,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/baekryong01.jpg",
-      "img2": "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc3bZYx%2FbtrspKJN70e%2FXjZOleFz69KOI8NclHBVW1%2Fimg.png",
+      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/baekryong/baekryong02.jpg",
+      "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/baekryong/baekryong03.jpg",
       "name": "백룡",
       "birth": "23/07/01",
-      "gender": "Male",
+      "gender": "수컷",
       "morph": "Lilly White",
       "parent": ["부: ?", "모: ?"],
       "shop": "바마프"
@@ -18,7 +19,7 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "참깨",
       "birth": "23/05/01",
-      "gender": "Female",
+      "gender": "암컷",
       "morph": "Normal",
       "parent": ["부: ?", "모: ?"],
       "shop": "렙타일아트뮤지엄"
@@ -30,19 +31,19 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "튼튼",
       "birth": "23/09/25",
-      "gender": "Male",
+      "gender": "수컷",
       "morph": "Axantic",
       "parent": ["부: 탄", "모: ?"],
       "shop": "크레스탈"
     },
     {
       "id": 3,
-      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji02.jpg",
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/bbuchi/bbuchi01.jpg",
       "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji01.jpg",
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "뿌치",
       "birth": "23/10/05",
-      "gender": "Male",
+      "gender": "수컷",
       "morph": "Cappuccino",
       "parent": ["부: ?", "모: ?"],
       "shop": "WalnutCre"
@@ -54,7 +55,7 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "레오",
       "birth": "23/11/24",
-      "gender": "Female",
+      "gender": "암컷",
       "morph": "Lilly White(Het)(Phantom)",
       "parent": ["부: GOD", "모: ?"],
       "shop": "infinite gecko"
@@ -66,7 +67,7 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "티티",
       "birth": "23/09/01",
-      "gender": "Male",
+      "gender": "수컷",
       "morph": "Lilly White(Het)",
       "parent": ["부: 앨리엇", "모: ?"],
       "shop": "도심속도마뱀"
@@ -78,7 +79,7 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "나나",
       "birth": "23/10/01",
-      "gender": "Female",
+      "gender": "암컷",
       "morph": "Lilly White(Het)",
       "parent": ["부: 앨리엇", "모: ?"],
       "shop": "도심속도마뱀"
@@ -90,7 +91,7 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "송이",
       "birth": "23/11/01",
-      "gender": "Male",
+      "gender": "수컷",
       "morph": "Sable",
       "parent": ["부: ?", "모: ?"],
       "shop": "꼰정게코"
@@ -102,7 +103,7 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "또치",
       "birth": "23/12/01",
-      "gender": "Unknown",
+      "gender": "미구분",
       "morph": "Cappuccino",
       "parent": ["부: ?", "모: ?"],
       "shop": "WalnutCre"
@@ -114,7 +115,7 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "달찌",
       "birth": "23/09/01",
-      "gender": "Female",
+      "gender": "암컷",
       "morph": "Normal(Super Dalmatian)",
       "parent": ["부: ?", "모: ?"],
       "shop": "Atory"
@@ -126,19 +127,19 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "마찌",
       "birth": "23/05/01",
-      "gender": "Male",
+      "gender": "수컷",
       "morph": "Normal(Dalmatian)",
       "parent": ["부: ?", "모: ?"],
       "shop": "Atory"
     },
     {
       "id": 11,
-      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji02.jpg",
-      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji01.jpg",
-      "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/chunhyang/chunhyang05.jpg",
+      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/chunhyang/chunhyang07.jpg",
+      "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/chunhyang/chunhyang01.jpg",
       "name": "춘향",
       "birth": "23/09/01",
-      "gender": "Female",
+      "gender": "암컷",
       "morph": "Lilly White",
       "parent": ["부: ?", "모: ?"],
       "shop": "Thewall"
@@ -150,7 +151,7 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "무뮤",
       "birth": "24/03/01",
-      "gender": "Unknown",
+      "gender": "미구분",
       "morph": "Lilly White(Het)",
       "parent": ["부: ?", "모: ?"],
       "shop": "Atory"
@@ -162,7 +163,7 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "옹치",
       "birth": "24/03/01",
-      "gender": "Unknown",
+      "gender": "미구분",
       "morph": "Cappuccino(Pin)",
       "parent": ["부: ?", "모: ?"],
       "shop": "Creyong"
@@ -174,7 +175,7 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "몽룡",
       "birth": "23/10/01",
-      "gender": "Male",
+      "gender": "수컷",
       "morph": "Normal(트익할)",
       "parent": ["부: ?", "모: ?"],
       "shop": "쭌이네"
@@ -186,7 +187,7 @@
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "빈치",
       "birth": "06/?/?",
-      "gender": "Female",
+      "gender": "암컷",
       "morph": "Turtle",
       "parent": ["부: ?", "모: ?"],
       "shop": ""
