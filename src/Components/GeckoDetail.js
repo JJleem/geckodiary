@@ -66,7 +66,7 @@ const GeckoDetail = () => {
                 </Carousel.Caption>
               </SlideImgWrap>
               <SlideImgWrap>
-                <GeckoDetailImg src={gecko?.img} />
+                <GeckoDetailImg src={gecko?.img2} />
                 <Carousel.Caption>
                   <h3>Second slide label</h3>
                   <p>
@@ -75,7 +75,7 @@ const GeckoDetail = () => {
                 </Carousel.Caption>
               </SlideImgWrap>
               <SlideImgWrap>
-                <GeckoDetailImg src={gecko?.img} />
+                <GeckoDetailImg src={gecko?.img3} />
                 <Carousel.Caption>
                   <h3>Third slide label</h3>
                   <p>

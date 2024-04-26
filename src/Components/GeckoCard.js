@@ -6,6 +6,7 @@ const GeckoCard = ({ item }) => {
   const showDetail = () => {
     navigate(`/gecko/${item.id}`);
   };
+  console.log(item?.img);
   return (
     <Geckocard onClick={showDetail}>
       <GeckoCardImg src={item?.img} alt="imginfo" />
