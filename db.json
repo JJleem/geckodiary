@@ -2,9 +2,9 @@
   "crestedgecko": [
     {
       "id": 0,
-      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/baekryong01.jpg",
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/baek10.jpg",
       "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/baekryong/baekryong02.jpg",
-      "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/baekryong/baekryong03.jpg",
+      "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/baek_chair2.jpg",
       "name": "백룡",
       "birth": "23/07/01",
       "gender": "수컷",
@@ -14,9 +14,9 @@
     },
     {
       "id": 1,
-      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham01.jpg",
-      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham02.jpg",
-      "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/cham_stand03.jpg",
+      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/cham_stand04.jpg",
+      "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/cham_stand01.jpg",
       "name": "참깨",
       "birth": "23/05/01",
       "gender": "암컷",
@@ -26,8 +26,8 @@
     },
     {
       "id": 2,
-      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji02.jpg",
-      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji01.jpg",
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/teun01.jpg",
+      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/teun02.jpg",
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "튼튼",
       "birth": "23/09/25",
@@ -86,7 +86,7 @@
     },
     {
       "id": 7,
-      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji02.jpg",
+      "img": "///ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/song1.jpg",
       "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji01.jpg",
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "송이",
@@ -112,7 +112,7 @@
       "id": 9,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji02.jpg",
       "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji01.jpg",
-      "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
+      "img3": "///ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/dal01.jpg",
       "name": "달찌",
       "birth": "23/09/01",
       "gender": "암컷",
@@ -170,8 +170,8 @@
     },
     {
       "id": 14,
-      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji02.jpg",
-      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji01.jpg",
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/mong1.jpg",
+      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/mong2.jpg",
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "몽룡",
       "birth": "23/10/01",
@@ -182,7 +182,7 @@
     },
     {
       "id": 15,
-      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji02.jpg",
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/yomi1.jpg",
       "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji01.jpg",
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "요미",
@@ -195,7 +195,7 @@
     {
       "id": 16,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/vinchi01.jpg",
-      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji01.jpg",
+      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/majji/vinchi1.jpg",
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
       "name": "빈치",
       "birth": "06/?/?",
