@@ -182,6 +182,18 @@
     },
     {
       "id": 15,
+      "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji02.jpg",
+      "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji01.jpg",
+      "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
+      "name": "요미",
+      "birth": "24/03/30",
+      "gender": "미구분",
+      "morph": "Normal(트익할)",
+      "parent": ["부: 뭉크", "모: 베티"],
+      "shop": "선주비원더"
+    },
+    {
+      "id": 16,
       "img": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/vinchi01.jpg",
       "img2": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/daljji01.jpg",
       "img3": "//ecimg.cafe24img.com/pg972b74884267083/leemjaejun/img/cham03.jpg",
