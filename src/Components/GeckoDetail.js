@@ -4,7 +4,6 @@ import { Container, Col, Row, Spinner, Carousel } from "react-bootstrap";
 import GeckoWeight from "./GeckoWeight";
 import { setPageTitle } from "./util";
 import styled from "styled-components";
-import Gallery from "./Gallery";
 
 const GeckoDetail = () => {
   const [gecko, setGecko] = useState();
@@ -36,7 +35,8 @@ const GeckoDetail = () => {
       (id >= 12 && id <= 12 && "무뮤") ||
       (id >= 13 && id <= 13 && "옹치") ||
       (id >= 14 && id <= 14 && "몽룡") ||
-      (id >= 15 && id <= 15 && "빈치")
+      (id >= 15 && id <= 15 && "요미") ||
+      (id >= 16 && id <= 16 && "빈치")
     } 
     의 기록`);
   }, []);
@@ -97,12 +97,7 @@ const GeckoDetail = () => {
           </Col>
         </GeckoInfo>
         <GeckoInfo>
-          <Col lg={8}>
-            <GeckoWeight />
-          </Col>
-          <Col lg={4}>
-            <Gallery />
-          </Col>
+          <GeckoWeight />
         </GeckoInfo>
       </GeckoContainer>
     );

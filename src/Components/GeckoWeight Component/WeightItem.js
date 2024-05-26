@@ -31,7 +31,6 @@ const WeightItem = ({ num, paramsid, date, emotionId, content }) => {
             {new Date(date).toLocaleDateString()}
           </div>
           <div className="params">
-            {" "}
             {paramsid >= 0 && paramsid <= 0 && "백룡"}
             {paramsid >= 1 && paramsid <= 1 && "참깨"}
             {paramsid >= 2 && paramsid <= 2 && "튼튼"}
@@ -47,7 +46,8 @@ const WeightItem = ({ num, paramsid, date, emotionId, content }) => {
             {paramsid >= 12 && paramsid <= 12 && "무뮤"}
             {paramsid >= 13 && paramsid <= 13 && "옹치"}
             {paramsid >= 14 && paramsid <= 14 && "몽룡"}
-            {paramsid >= 15 && paramsid <= 15 && "빈치"}
+            {paramsid >= 15 && paramsid <= 15 && "요미"}
+            {paramsid >= 16 && paramsid <= 16 && "빈치"}
           </div>
           <div className="content_wrapper">{content.slice(0, 25)}</div>
         </div>

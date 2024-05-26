@@ -66,6 +66,10 @@ const GeckoCardImg = styled.img`
   min-height: 450px;
   min-width: auto;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
 `;
 const TextInfo = styled.div`
   display: flex;

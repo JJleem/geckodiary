@@ -56,7 +56,8 @@ const Viewers = ({ content, emotionId }) => {
           {id >= 12 && id <= 12 && "무뮤"}
           {id >= 13 && id <= 13 && "옹치"}
           {id >= 14 && id <= 14 && "몽룡"}
-          {id >= 15 && id <= 15 && "빈치"} 의 기록
+          {id >= 15 && id <= 15 && "요미"}
+          {id >= 16 && id <= 16 && "빈치"} 의 기록
         </h4>
         <div className="content_wrapper">{content}</div>
       </section>
