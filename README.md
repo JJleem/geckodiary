@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# 리액트로 작업한 게코사육일지 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+각각의 게코들의 카드섹션이존재하고 각각의 일기장을 구현하였습니다.
+CRUD기능을 구현하였고 react-router-dom을 적극 활용하여 기능을 구현하였습니다
 
 ## Available Scripts
 
