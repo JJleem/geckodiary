@@ -1,13 +1,13 @@
-# 리액트로 작업한 게코사육일지 
+# 🦎리액트로 작업한 게코사육일지🦎
 
 각각의 게코들의 카드섹션이존재하고 각각의 일기장을 구현하였습니다.
 CRUD기능을 구현하였고 react-router-dom을 적극 활용하여 기능을 구현하였습니다
 
-## Available Scripts
+## Skill
 
-In the project directory, you can run:
+React.js
 
-### `npm start`
+## 라이브러리
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
